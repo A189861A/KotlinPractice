@@ -6,9 +6,18 @@ fun main() {
         println("i = $i")
     }
 
-    var a = 1;
-    val s1 = "a is $a"
-    a = 2
-    val s2 = "${s1.replace("is", "was")}, but now is $a"
-    println(s2)
+    val x = 10
+    val y = 9
+    if (x in 1..y+1) {
+        println("fits in range")
+    }
+
+    for (x in 1..10 step 2) {
+        print(x)
+    }
+    println()
+    for (x in 9 downTo 0 step 3) {
+        print(x)
+    }
+
 }
