@@ -41,4 +41,25 @@ fun main() {
     // ✅ 直接用类名调用，不用创建对象！
     println(UserA.version)
     UserA.showVersion()
+
+    /*
+    * 关键字	vararg（variable arguments 的缩写）
+    * 参数类型	vararg 参数名: 类型
+    * 功能：接收可变数量的参数，将它们转换为一个列表
+    * vararg 参数可以与其他参数混合使用，但必须放在最后：
+    * */
+    fun <T> asList(vararg ts: T): List<T> {
+        val result = ArrayList<T>()
+        for (t in ts) // ts 是一个数组
+            result.add(t)
+        return result
+    }
+    val list = asList(1, 2, 3)
+    println(list) // [1, 2, 3]
+
+    //    展开运算符 *：将数组展开为多个参数
+    val arrA = arrayOf(1, 2, 3, 4)
+    val listA = asList(*arrA)  // 将数组展开为多个参数
+    println(listA) // [1, 2, 3, 4]
+
 }
