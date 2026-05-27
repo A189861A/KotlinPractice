@@ -17,6 +17,12 @@ class Student {
     }
 }
 
+class B {
+    fun foo() {
+        println("B.foo()")
+    }
+}
+
 
 
 fun main() {
@@ -50,6 +56,9 @@ fun main() {
         age = 20
         showInfo()
     }
+
+    // 调用 class B 的 foo 方法
+    B().foo()
 
 }
 
